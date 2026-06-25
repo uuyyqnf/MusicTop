@@ -1,0 +1,266 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+/* ширина */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* фон дорожки */
+::-webkit-scrollbar-track {
+    background: #181818;
+}
+
+/* ползунок */
+::-webkit-scrollbar-thumb {
+    background: #414141;
+    border-radius: 10px;
+}
+
+/* при наведении */
+::-webkit-scrollbar-thumb:hover {
+    background: #3d3d3d;
+}
+body{
+    min-height: 100vh;
+    font-family: "Nata Sans", sans-serif;
+    display: flex;
+    flex-direction: column;
+
+    text-align: center;
+    background-color: #0D0D0D;
+    color: #F0FFFF;
+}
+
+.main-container{
+    flex: 1;
+}
+
+
+.head-container{
+    font-size: 20px;
+    margin-top: 25px;
+}
+.addBtn{
+    margin-top: 10px;
+    font-family: "Nata Sans", sans-serif;
+}
+.addBtn button{
+    background-color: #0d0d0d00;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    min-height: 30px;
+    min-width: 140px;
+    transition: 0.15s ease;
+    font-family: "Nata Sans", sans-serif;
+    box-shadow: 0 10px 8px rgba(0, 0, 0, 0.4);
+}
+.addBtn button:hover{
+    background-color: #4d4d4d41;
+}
+
+.top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.album{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    background-color: #181818;
+    min-height: 40px;
+    width: min(650px, 90%);
+    border: 1px solid rgb(56, 56, 56);
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+    padding: 15px;
+    transition: 0.3s ease;
+}
+.info-album{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1;
+}
+.editalbBtn{
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+    border: 1px solid white;
+    height: 30px;
+    width: 110px;
+    border-radius: 5px;
+    transition: 0.15s ease;
+    font-family: "Nata Sans", sans-serif;
+    box-shadow: 0 7px 8px rgba(0, 0, 0, 0.4);
+}
+
+.editalbBtn:hover{
+    background-color: #4d4d4d41;
+}
+.info-album h2{
+    font-size: min(20px,3.5vw);
+}
+.album-author{
+    font-size: min(12px,2vw);
+}
+.album-rating{
+    font-size: min(30px,4vw);
+    color: rgb(255, 255, 255);
+}
+.album-image{
+    object-fit: cover;
+    border-radius: 5px;
+    height: 50px;
+    width: 50px;
+}
+
+
+.album:hover{
+    transform: translateY(-3px);
+}
+
+footer {
+    padding: 20px;
+    color: gray;
+}
+.overlay{
+    display: none;
+    position: fixed;
+    z-index: 999;
+    background-color: #00000075;
+    inset: 0;
+}
+
+.addAlbum{
+    display: none;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 20px;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    min-height: 500px;
+    min-width: 400px;
+
+    background-color: #1b1b1b;
+    border: 1px solid #333;
+    border-radius: 15px;
+
+    z-index: 1000;
+}
+.editAlbum{
+    display: none;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 20px;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    min-height: 500px;
+    min-width: 400px;
+
+    background-color: #1b1b1b;
+    border: 1px solid #333;
+    border-radius: 15px;
+
+    z-index: 1000;
+}
+.editAlbum input{
+    width: 250px;
+
+    font-family: "Nata Sans", sans-serif;
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+
+    min-height: 35px;
+    padding: 0 10px;
+
+    border-radius: 5px;
+}
+.editAlbum h2{
+    margin-bottom: 10px;
+}
+.album-info{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.album-ratings{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.album-sort{
+    font-size: min(12px,2.5vw);
+    color: rgb(134, 134, 134);
+}
+
+.addAlbum input{
+    width: 250px;
+
+    font-family: "Nata Sans", sans-serif;
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+
+    min-height: 35px;
+    padding: 0 10px;
+
+    border-radius: 5px;
+}
+.addAlbum h2{
+    margin-bottom: 10px;
+}
+.btn87{
+    display: flex;
+    gap: 10px;
+}
+.btn87 button{
+    font-family: "Nata Sans", sans-serif;
+    background-color: #00000000;
+    border: 1px solid white;
+    color: white;
+    border-radius: 5px;
+    min-height: 35px;
+    min-width: 100px;
+    transition: 0.2s ease;
+}
+.btn87 button:hover{
+   background-color: #4d4d4d41;
+}
+
+@media (max-width: 768px) {
+    .album{
+        gap: 8px;
+    }
+    .editalbBtn {
+        width: 70px;
+        height: 30px;
+        font-size: 8px;
+    }
+    .album-image{
+        height: 40px;
+        width: 40px;
+    }
+}

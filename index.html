@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Музыкальные Топы by @uuyyqnf</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nata+Sans:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main-container">
+        <div class="head-container">
+            <h1>Музыкальные Топы</h1>
+            <div>by @uuyyqnf</div>
+        </div>
+        <div class="middle-container">
+            <div style="gap: 20px; display: flex; justify-content: center;">
+                <div onclick="openAlbum()" class="addBtn"> <button>Добавить Альбом</button></div>
+                <div onclick="clearTop()" class="addBtn"> <button>Сбросить Топ</button></div>
+            </div>
+            <div class="top">
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div>v0.0.3</div>
+    </footer>
+    <div id="overlay" class="overlay"></div>
+    <div id="addAlbum" class="addAlbum">
+        <h2>Добавить альбом</h2>
+        <div class="album-info">
+            <input id="album-title" placeholder="введите название альбома" type="text">
+            <input id="album-author" placeholder="введите автора" type="text">
+            <input id="album-image" type="url" placeholder="введите url обложки">
+        </div>
+        <div class="album-ratings">
+            <input id="rating-atm" placeholder="Атмосфера" type="number" name="" min="1" max="10" oninput="this.value = Math.min(10, Math.max(1,this.value))">
+            <input id="rating-beat" placeholder="Биты" type="number" name="" min="1" max="10" oninput="this.value = Math.min(10, Math.max(1,this.value))">
+            <input id="rating-act" placeholder="Актуальность" type="number" name="" min="1" max="10" oninput="this.value = Math.min(10, Math.max(1,this.value))">
+            <input id="rating-kach" placeholder="Значение" type="number" name="" min="1" max="10" oninput="this.value = Math.min(10, Math.max(1,this.value))">
+            <input id="rating-vpech" placeholder="Общее впечатление" type="number" name="" min="5" max="10" oninput="this.value = Math.min(10, Math.max(5,this.value))">
+        </div>
+        <div class="btn87">
+            <button onclick="addAlbum()">Добавить</button>
+            <button onclick="closeAlbum()">Закрыть</button>
+        </div>
+    </div>
+    <div id="editAlbum" class="editAlbum">
+        <h2>Изменить альбом</h2>
+        <div class="album-info">
+            <input id="edit-title" placeholder="введите название альбома" type="text">
+            <input id="edit-author" placeholder="введите автора" type="text">
+            <input id="edit-image" type="url" placeholder="введите url обложки">
+        </div>
+        <div class="album-ratings">
+            <input id="edit-rating-atm" placeholder="Атмосфера" type="number" name="" min="1" max="10">
+            <input id="edit-rating-beat" placeholder="Бит" type="number" name="" min="1" max="10">
+            <input id="edit-rating-act" placeholder="Актуальность" type="number" name="" min="1" max="10">
+            <input id="edit-rating-kach" placeholder="Значение" type="number" name="" min="1" max="10">
+            <input id="edit-rating-vpech" placeholder="Общее впечатление" type="number" name="" min="5" max="10">
+        </div>
+        <div class="btn87">
+            <button onclick="saveEditAlbum()">Сохранить</button>
+            <button onclick="closeAlbum()">Закрыть</button>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
